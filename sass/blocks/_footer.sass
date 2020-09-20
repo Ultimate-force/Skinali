@@ -1,0 +1,61 @@
+.footer
+   padding: 40px 0
+   background: #262626
+   color: #ffffff
+   &-block
+    display: flex
+    justify-content: space-between
+   a
+     color: #ffffff
+     text-decoration: none
+   &__title
+     margin-top: 8px
+     margin-bottom: 8px
+     font-size: 18px
+     text-transform: uppercase
+     +bold 
+   &__subtitle
+     display: block
+     margin-bottom: 48px
+   &__copyright
+     color: #767676
+   &__pay-logo
+     margin: 15px
+   &__contacts
+     text-align: right
+   &__phone
+     font-size: 20px
+     display: block
+     margin-bottom: 20px
+     +bold
+   &__mail
+     display: block
+     margin-bottom: 20px
+   &-social
+     &__link
+      margin-left: 10px
+      .view
+         background: #fff
+         color: #262626
+         padding: 5px
+         border-radius: 2px
+         display: inline-flex
+         justify-content: center
+         width: 25px
+
+   
+@media (max-width: 768px)
+    .footer
+      &-block
+        flex-direction: column
+        align-items: center
+        text-align: center
+      &__contacts
+        text-align: center
+        margin-top: 30px
+@media (max-width: 991px)
+      .footer
+        &-block
+        &__pay-logo
+          margin: 13px
+

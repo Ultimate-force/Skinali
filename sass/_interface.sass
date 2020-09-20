@@ -1,0 +1,141 @@
+html 
+	&::-webkit-scrollbar 
+		width: 30px;
+		height: 30px;
+	
+	&::-webkit-scrollbar-thumb 
+		background: #507fe1
+		border-radius: 30px;
+		box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+	
+	&::-webkit-scrollbar-track 
+		background: #f1f1f1 
+	
+
+
+body
+  +light
+  color: $text-color
+img
+  max-width: 100%
+.section
+  padding: 100px 0
+  &-title
+    font-size: 30px
+    +bold
+    text-align: center
+    text-transform: uppercase
+  &__title
+    margin-bottom: 100px
+.button-o
+  text-transform: uppercase
+  text-decoration: none
+  padding: 17px 22px
+  border: 2px solid $primary
+  font-size: 12px
+  +bold
+  color: $primary
+  cursor: pointer
+  outline: none
+  background: none
+.button
+  text-decoration: none
+  text-transform: uppercase
+  border: none
+  background: $primary
+  color: #ffffff
+  padding: 15px 45px
+  outline: none
+  +bold
+  &:hover
+    cursor: pointer
+  &-fitting
+    color: $primary
+    background-color: #fff
+  &-add
+    background-color: lighten($primary, 10%) 
+    color: #ffffff
+  &-like  
+    background-color: $primary
+    height: 30px
+    border: none
+    width: 30px
+    cursor: pointer
+    outline: none
+  &__white
+    color: #fff
+
+.bg-secondary
+  background: $bg-secondary
+.input
+  height: 80px
+  padding-left: 30px
+  border: 1px solid #dddddd
+  outline: none
+.checkbox
+  display: none
+  &:checked + label::before
+    background: $primary
+
+.select
+  width: 100%
+  height: 80px
+  border: 1px solid #dddddd
+  outline: none
+  position: relative
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    z-index: 9
+    top: 50%
+    transform: translateY(-50%)
+    right: 20px
+    width: 20px
+    height: 20px
+    background: url('../images/caret.png') no-repeat center
+    background-size: 100%
+    cursor: pointer
+  &_checked
+    line-height: 80px
+    padding-left: 30px
+  &__dropdown
+    position: absolute
+    top: 80px
+    width: 100%
+    background-color: #fff
+    border: 1px solid #dddddd
+    margin: 0
+    list-style: none
+    padding: 0
+    display: none
+    &_open
+      display: block
+  &__option
+    padding: 20px
+    cursor: pointer
+    &:hover
+      background-color: $bg-secondary
+.checkbox
+  &-label
+    display: flex
+    align-items: center
+    margin-right: 41px
+    cursor: pointer 
+    &:before
+      content: ''
+      width: 30px
+      height: 30px
+      border: 1px solid #dddddd
+      margin-right: 20px
+      transition: 0.3s
+      
+
+@media (max-width: 576px )
+    .button
+      &-o
+        font-size: 10px
+    .section
+      padding: 60px 0
+      &-title
+        font-size: 24px
