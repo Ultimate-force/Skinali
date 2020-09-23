@@ -13,6 +13,15 @@ $(window).load(function () {
    $('.menu-button').on('click', function () {
      $('.menu').toggleClass('menu_active');
    });
+    /* Настройки popup */
+   $('.popup-btn').on('click', function (event){
+     event.preventDefault();
+     $('.popup').fadeIn();
+   });
+   $('.box-close').on('click', function (event){
+     event.preventDefault();
+     $('.popup').fadeOut();
+   });
 
     /* Настройка select */
    $('.select_checked').on('click', function () {

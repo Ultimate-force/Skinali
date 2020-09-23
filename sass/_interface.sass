@@ -129,6 +129,95 @@ img
       border: 1px solid #dddddd
       margin-right: 20px
       transition: 0.3s
+
+.popup
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  display: none
+  z-index: 999
+
+  &-header
+    +bold
+    color: #fff
+  p
+    color: #fff
+.box
+  position: fixed
+  width: 350px
+  padding: 8px 20px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: #191919
+  text-align: center
+  &-close
+    position: absolute
+    top: -1.1rem
+    right: -2rem
+    outline: none
+    color: #fff
+    cursor: pointer
+    width: 2rem
+    text-align: center
+    border: none
+    background-color: transparent
+    font-size: 3rem
+
+  .message
+    border: 0
+    background: none
+    display: block
+    margin: 20px auto
+    text-align: center
+    border: 2px solid $primary
+    padding: 14px 10px
+    width: 200px
+    outline: none
+    color: white
+    transition: 0.25s
+  input,
+    &[type="text"], &[type="password"],
+      border: 0
+      background: none
+      display: block
+      margin: 20px auto
+      text-align: center
+      border: 2px solid $primary
+      padding: 14px 10px
+      width: 200px
+      outline: none
+      color: white
+      border-radius: 24px
+      transition: 0.25s
+
+    &[type="text"]:focus, &[type="password"]:focus
+      width: 280px
+      border-color: $primary
+    &[type="submit"]
+      border: 0
+      background: none
+      display: block
+      margin: 20px auto
+      text-align: center
+      border: 2px solid $primary
+      padding: 14px 40px
+      outline: none
+      color: white
+      border-radius: 24px
+      transition: 0.25s
+      cursor: pointer
+
+      &:hover
+        background: $primary
+  textarea:focus
+   width: 280px
+   border-color: $primary
       
 
 @media (max-width: 576px )
@@ -139,3 +228,16 @@ img
       padding: 60px 0
       &-title
         font-size: 24px
+@media (max-width: 414px )
+  .box
+   width: 290px
+   input,
+    &[type="text"]:focus, &[type="password"]:focus
+      width: 250px
+      border-color: $primary
+   textarea
+    &:focus
+      width: 250px
+      border-color: $primary
+
+ 
