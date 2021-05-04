@@ -6,6 +6,7 @@ $(window).load(function () {
    $('.before-slider').slick({
      draggable: false,
      dots: true,
+     swipe: false,
      dotsClass: 'before-slider__dots',
      prevArrow: $('.arrow-left'),
      nextArrow: $('.arrow-right')
